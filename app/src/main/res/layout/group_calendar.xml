@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentPadding="10dp"
+    app:cardBackgroundColor="@color/colorPrimary">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Select Days For Event"
+            android:layout_marginBottom="10dp"/>
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendar"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@color/colorBackground"
+            app:mcv_selectionColor="@color/colorPrimaryDark"
+            app:mcv_selectionMode="multiple"
+            app:mcv_calendarMode="month"
+            app:mcv_showWeekDays="true"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/createEventButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16sp"
+            android:text="Create Event"
+            app:backgroundTint="@color/colorEditBackground"
+            android:textColor="@color/colorEditText"
+            app:cornerRadius="25dp"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pageMargin">20dp</dimen>
+    <dimen name="pagerOffset">30dp</dimen>
+    <dimen name="pageMarginAndoffset">50dp</dimen>
+    <dimen name="viewpager_next_item_visible">26dp</dimen>
+    <dimen name="viewpager_current_item_horizontal_margin">42dp</dimen>
+    <dimen name="viewpager_current_icon_horizontal_margin">12dp</dimen>
+    <dimen name="notification_elevation">8dp</dimen>
+    <dimen name="icon_size">45dp</dimen>
+    <dimen name="notification_icon_size">60dp</dimen>
+</resources>

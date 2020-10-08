@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@id/action_global_mainFragment"
+        android:title="home"
+        android:icon="@drawable/ic_home_black_24dp"/>
+    <group
+        android:id="@+id/created"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/contacts"
+            android:title="contacts"
+            android:icon="@drawable/ic_contacts_black_24dp"/>
+        <item
+            android:id="@id/action_global_groupsPageFragment"
+            android:title="groups"
+            android:icon="@drawable/ic_group_black_24dp"/>
+        <item
+            android:id="@+id/events"
+            android:title="events"
+            android:icon="@drawable/ic_event_black_24dp"/>
+    </group>
+
+</menu>

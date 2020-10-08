@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/mainFragment"
+    android:id="@+id/main">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.timehunter.MainFragment"
+        android:label=" " >
+    </fragment>
+
+    <fragment
+        android:id="@+id/groupsPageFragment"
+        android:name="com.example.timehunter.GroupsPage"
+        android:label="Groups" >
+        <action
+            android:id="@+id/action_groupsPageFragment_to_viewGroupFragment"
+            app:destination="@id/viewGroupFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="com.example.timehunter.CreateGroupFragment"
+        android:label="Create A Group"
+        tools:layout="@layout/fragment_create_group" >
+        <action
+            android:id="@+id/action_createGroupFragment_to_viewGroupFragment"
+            app:destination="@id/viewGroupFragment" />
+        <action
+            android:id="@+id/action_createGroupFragment_to_confrimGroup"
+            app:destination="@id/confrimGroup" />
+        <action
+            android:id="@+id/action_createGroupFragment_to_contactsPage2"
+            app:destination="@id/contactsPage2" />
+    </fragment>
+
+    <action android:id="@+id/action_global_mainFragment"
+        app:destination="@id/mainFragment"/>
+
+    <action android:id="@+id/action_global_groupsPageFragment"
+        app:destination="@id/groupsPageFragment"/>
+
+    <action android:id="@+id/action_global_createGroupsPage"
+        app:destination="@id/createGroupFragment"/>
+    <fragment
+        android:id="@+id/viewGroupFragment"
+        android:name="com.example.timehunter.ViewGroupFragment"
+        android:label="" >
+        <action
+            android:id="@+id/action_viewGroupFragment_to_createGroupFragment"
+            app:destination="@id/createGroupFragment"
+            app:popUpTo="@+id/groupsPageFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_viewGroupFragment_to_contactsPage2"
+            app:destination="@+id/contactsPage2" />
+    </fragment>
+    <fragment
+        android:id="@+id/confrimGroup"
+        android:name="com.example.timehunter.ConfrimGroup"
+        android:label="Confirm New Group"
+        tools:layout="@layout/confirm_group" >
+        <action
+            android:id="@+id/action_confrimGroup_to_groupsPageFragment"
+            app:destination="@id/groupsPageFragment" />
+        <action
+            android:id="@+id/action_confrimGroup_to_viewGroupFragment"
+            app:destination="@id/viewGroupFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="group"
+            app:argType="com.example.timehunter.Group" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactsPage2"
+        android:name="com.example.timehunter.ContactsPage"
+        android:label="Contacts" >
+        <argument
+            android:name="group"
+            app:argType="com.example.timehunter.Group" />
+    </fragment>
+
+</navigation>
